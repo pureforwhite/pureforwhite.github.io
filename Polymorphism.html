@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .code {
+                font-family: monospace;
+                border: 1px solid black;
+                padding: 5px;
+                display: block;
+                margin: 10px 0;
+                white-space: pre;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Java 物件導向編程：Polymorphism多型</h1>
+        
+        <h2>I. 多型: 定義</h2>
+        <p>多型是物件導向編程的另一個基本概念。"多型" 這個詞來自希臘語，意思是 "多種形狀"。在編程中，它允許物件根據其數據類型或類別採取多種形式。</p>
+
+        <h2>II. Java 中的多型</h2>
+        <p>在 Java 中，多型主要分為兩種類型：編譯時多型（也稱為靜態綁定或方法重載）和運行時多型（也稱為動態綁定或方法覆寫）。</p>
+
+        <h3>1. 方法重載（編譯時多型）</h3>
+        <p>在 Java 中，如果一個類別內的兩個或多個方法具有相同的名稱，但參數不同（類型不同、數量不同或兩者皆有），則稱為方法重載，這是編譯時多型的一個例子。以下是一個簡單的範例：</p>
+        <div class="code">
+public class Calculation {
+    void sum(int a, int b) {
+        System.out.println("Sum is " + (a + b));
+    }
+    void sum(double a, double b) {
+        System.out.println("Sum is " + (a + b));
+    }
+}
+        </div>
+        <p>在此範例中，<code>sum</code> 方法以兩種不同的參數類型進行重載。</p>
+
+        <h3>2. 方法覆寫（運行時多型）</h3>
+        <p>在 Java 中，子類別可以提供一個已由其父類別提供的方法的具體實現。子類別中的方法必須具有與父類別中的方法相同的名稱、返回類型和參數。這被稱為方法覆寫，它是運行時多型的一個例子。</p>
+        <div class="code">
+public class Animal {
+    public void makeSound() {
+        System.out.println("The animal makes a sound");
+    }
+}
+
+public class Dog extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("The dog barks");
+    }
+}
+        </div>
+        <p>在此範例中，<code>Dog</code> 類別覆寫了來自 <code>Animal</code> 類別的 <code>makeSound</code> 方法。</p>
+        <p>這是 Java 中多型的基本概述。實習創建你自己的類別並使用多型，以更好地理解這個概念。</p>
+    </body>
+</html>
