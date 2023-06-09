@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .code {
+                font-family: monospace;
+                border: 1px solid black;
+                padding: 5px;
+                display: block;
+                margin: 10px 0;
+                white-space: pre;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Java 物件導向編程：Inheritance繼承</h1>
+        
+        <h2>I. 繼承: 定義</h2>
+        <p>繼承是物件導向編程的基本原則之一。它允許一個類別（子類別）繼承另一個類別（父類別）的屬性和方法。繼承的主要優點是它促進了程式碼的可重用性。</p>
+
+        <h2>II. Java 中的繼承</h2>
+        <p>在 Java 中，我們使用 <code>extends</code> 關鍵字表示繼承。以下是一個簡單的範例：</p>
+        <div class="code">
+public class Animal {
+    public void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+
+public class Dog extends Animal {
+    public void bark() {
+        System.out.println("The dog barks.");
+    }
+}
+        </div>
+        <p>在此範例中，<code>Dog</code> 是子類別，<code>Animal</code> 是父類別。<code>Dog</code> 類別繼承了 <code>Animal</code> 類別的 <code>eat</code> 方法。因此，即使在 <code>Dog</code> 類別中未定義 <code>eat</code>，你也可以建立一個 <code>Dog</code> 物件並在其上呼叫 <code>eat</code> 方法。</p>
+
+        <h2>III. <code>super</code> 關鍵字</h2>
+        <p>Java 提供了 <code>super</code> 關鍵字，用於引用直接的父類別物件。例如，如果我們想從子類別中呼叫父類別的方法，我們可以使用 <code>super.methodName()</code>。</p>
+
+        <h2>IV. 方法覆寫</h2>
+        <p>方法覆寫允許子類別提供一個已由其父類別提供的方法的具體實現。子類別中的方法必須具有與父類別中的方法相同的名稱、返回類型和參數。</p>
+        <div class="code">
+public class Animal {
+    public void makeSound() {
+        System.out.println("The animal makes a sound.");
+    }
+}
+
+public class Dog extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("The dog barks.");
+    }
+}
+        </div>
+        <p>在此範例中，<code>Dog</code> 類別覆寫了來自 <code>Animal</code> 類別的 <code>makeSound</code> 方法。</p>
+        <p>這是 Java 中繼承的基本概述。實習創建你自己的類別並使用繼承，以更好地理解這個概念。</p>
+    </body>
+</html>
