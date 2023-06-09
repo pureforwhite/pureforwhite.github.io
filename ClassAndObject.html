@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .code {
+                font-family: monospace;
+                border: 1px solid black;
+                padding: 5px;
+                display: block;
+                margin: 10px 0;
+                white-space: pre;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Java 物件導向編程：類別和物件</h1>
+        
+        <h2>I. 類別和物件: 定義</h2>
+        <p>類別：在 Java 中，類別是創建物件的藍圖。一個類別可以包含欄位（變數）和方法來描述物件的行為。</p>
+        <p>物件：物件是類別的實例。它是物件導向編程的基本單位，代表了現實生活中的實體。一個物件有狀態和行為。</p>
+
+        <h2>II. 定義類別</h2>
+        <p>使用關鍵字 <code>class</code> 定義類別。以下是一個例子：</p>
+        <div class="code">
+public class Dog {
+    String breed;   // 定義 breed 欄位
+    int age;        // 定義 age 欄位
+    String color;   // 定義 color 欄位
+
+    void barking() {    // 定義一個名為 barking 的方法
+        // 方法的代碼在這裡
+    }
+
+    void hungry() {     // 定義一個名為 hungry 的方法
+        // 方法的代碼在這裡
+    }
+
+    void sleeping() {   // 定義一個名為 sleeping 的方法
+        // 方法的代碼在這裡
+    }
+}
+        </div>
+
+        <h2>III. 創建物件</h2>
+        <p>要使用 <code>Dog</code> 類別，需要創建該類別的物件。以下是如何做到的：</p>
+        <div class="code">
+Dog myDog = new Dog();
+        </div>
+        <p>在這條語句中，<code>Dog</code> 是類型（類似於 int，String 等），<code>myDog</code> 是變量名，<code>new</code> 是用於分配記憶體的關鍵字，<code>Dog()</code> 是類別的構造器。</p>
+
+        <h2>IV. 存取類別成員</h2>
+        <p>可以使用點（<code>.</code>）運算符來存取類別成員（欄位和方法）。以下是一個例子：</p>
+        <div class="code">
+public class Main {
+    public static void main(String[] args) {
+        // 創建 Dog 類別的一個物件
+        Dog myDog = new Dog();
+
+        // 訪問欄位
+        myDog.breed = "Golden Retriever";
+        myDog.age = 5;
+        myDog.color = "Golden";
+
+        // 訪問方法
+        myDog.barking();
+        myDog.hungry();
+        myDog.sleeping();
+    }
+}
+        </div>
+        <p>在這個例子中，我們設置了 <code>myDog</code> 物件的欄位並調用了它的方法。</p>
+
+        <h2>V. 建構子</h2>
+        <p>Java 的建構子是一種特殊的方法，用於初始化物件。當創建物件時，會調用建構子。</p>
+        <div class="code">
+public class Dog {
+    String breed;
+    int age;
+    String color;
+
+    // 建構子
+    Dog(String b, int a, String c) {
+        breed = b;
+        age = a;
+        color = c;
+    }
+
+    void barking() {
+        // 方法的代碼在這裡
+    }
+
+    void hungry() {
+        // 方法的代碼在這裡
+    }
+
+    void sleeping() {
+        // 方法的代碼在這裡
+    }
+}
+        </div>
+        <p>在這個例子中，創建一個 <code>Dog</code> 物件，你會這樣做：</p>
+        <div class="code">
+Dog myDog = new Dog("Golden Retriever", 5, "Golden");
+        </div>
+        <p>這是 Java 類別和物件的簡要介紹。練習創建自己的類別和物件來鞏固這些概念。</p>
+    </body>
+</html>
