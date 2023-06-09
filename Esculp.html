@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .code {
+                font-family: monospace;
+                border: 1px solid black;
+                padding: 5px;
+                display: block;
+                margin: 10px 0;
+                white-space: pre;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Java 物件導向編程：Encapsulation封裝</h1>
+        
+        <h2>I. 封裝: 定義</h2>
+        <p>封裝是物件導向編程的四大基本原則之一。封裝指的是將數據及操作該數據的方法封裝在單一單元中。許多編程語言都在類別形式中經常使用封裝。</p>
+
+        <h2>II. Java 中的封裝</h2>
+        <p>在 Java 中，可以透過以下方式實現封裝：</p>
+        <ul>
+            <li>將類別的變量宣告為私有（private）。</li>
+            <li>提供公開（public）的 setter 和 getter 方法，以修改和查看變量值。</li>
+        </ul>
+        <p>以下是一個簡單的範例：</p>
+        <div class="code">
+public class Student {
+    private String name; // private variable
+
+    // getter method
+    public String getName() {
+        return name;
+    }
+
+    // setter method
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+        </div>
+        <p>在這個範例中，<code>name</code> 是一個私有變量。不能直接從 <code>Student</code> 類別之外存取它。要讀取或修改 <code>name</code> 變量，必須使用 <code>getName</code> 和 <code>setName</code> 方法。</p>
+
+        <h2>III. 為什麼要使用封裝？</h2>
+        <p>封裝提供了對數據的控制。以下是封裝的一些好處：</p>
+        <ul>
+            <li>它提供了一種保護數據免於意外破壞的方式。</li>
+            <li>它讓您能夠控制哪些部分的程式可以存取類別的成員。</li>
+            <li>類別可以通過封裝其實現細節，改變方法的實現方式，而不改變使用該方法的方式。</li>
+            <li>類別可以在不改變外部程式碼存取數據方式的情況下，改變數據表示方式。</li>
+        </ul>
+        <p>這是 Java 中封裝的基本概述。封裝背後的主要思想是通過將數據和操作該數據的方法封裝在單一單元中來保護數據。在您的 Java 程式中實習封裝，以更好地理解這一原則。</p>
+    </body>
+</html>
